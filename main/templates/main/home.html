@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    Enter the details.
+{% block content %}
+    <form method=" POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form>
+{% endblock content %}
 </body>
 </html>
